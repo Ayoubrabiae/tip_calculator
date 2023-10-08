@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="stylesheet" href="styles/master.css">
+</head>
+
+<body>
+  <main>
+    <h2 class="title">SPLT<br>TTER</h2>
+    <div class="app">
+      <div class="inputs">
+        <div class="bill">
+          <label for="bill">Bill</label>
+          <span class="error-label">Can't be empty</span>
+          <div class="input-container">
+            <input type="number" id="bill" min="1" placeholder="0">
+            <img src="images/icon-dollar.svg" alt="dollar icon">
+          </div>
+        </div>
+        <div class="tip-selector">
+          <label>Select Tip %</label>
+          <div class="percents">
+            <span class="tip-percent" data-percent="5">5%</span>
+            <span class="tip-percent" data-percent="10">10%</span>
+            <span class="tip-percent" data-percent="15">15%</span>
+            <span class="tip-percent" data-percent="25">25%</span>
+            <span class="tip-percent" data-percent="50">50%</span>
+            <input class="custom-tip-percent" type="number" min="1" max="100" placeholder="Custom">
+          </div>
+        </div>
+        <div class="number-of-people">
+          <label for="people-number-input">Number of People</label>
+          <span class="error-label">Can't be empty</span>
+          <div class="input-container">
+            <input type="number" id="people-number-input" min="1" placeholder="0">
+            <img src="images/icon-person.svg" alt="user icon">
+          </div>
+        </div>
+      </div>
+      <div class="result">
+        <div class="tip-amount">
+          <div class="text">Tip Amount<span>/ person</span></div>
+          <div class="number">$0.00</div>
+        </div>
+        <div class="total">
+          <div class="text">Total<span>/ person</span></div>
+          <div class="number">$0.00</div>
+        </div>
+        <button class="reset-btn">Reset</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Ayoub Rabya</a>.
+  </footer>
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>
