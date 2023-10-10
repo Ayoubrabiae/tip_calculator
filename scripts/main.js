@@ -73,14 +73,17 @@ customPercentSelector.addEventListener('blur', (e) => {
 });
 
 const reset = () => {
-  billInp.value = '';
-  customPercentSelector.value = '';
-  peopleNumberInp.value = '';
-  if (document.querySelector('.percents .active')) {
-    document.querySelector('.percents .active').classList.remove('active');
+  if (resetBtn.classList.contains('active')) {
+    billInp.value = '';
+    customPercentSelector.value = '';
+    peopleNumberInp.value = '';
+    if (document.querySelector('.percents .active')) {
+      document.querySelector('.percents .active').classList.remove('active');
+    }
+    tipAmountArea.textContent = '$0.00';
+    totalArea.textContent = '$0.00';
+    resetBtn.classList.remove('active');
   }
-  tipAmountArea.textContent = '$0.00';
-  totalArea.textContent = '$0.00';
 };
 
 resetBtn.addEventListener('click', reset);
